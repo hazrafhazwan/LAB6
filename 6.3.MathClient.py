@@ -16,6 +16,9 @@ except socket.error as e:
 
 msg = Csocket.recv(1024)
 print(msg.decode('utf-8'))
+cmsg = "Client 1 has been connected!"
+Csocket.send(cmsg.encode('utf-8'))
+
 while True:
 
     print("\nMathematical Function")
@@ -31,9 +34,8 @@ while True:
         Csocket.send(str.encode(option))
 
     elif option == 'q':
-        print("Exiting system.")
-        b = input("yes?")
-        Csocket.send(b.encode())
+        print("Exiting system......")
+        Csocket.send(str.encode(option))
         sys.exit()
 
     else:
