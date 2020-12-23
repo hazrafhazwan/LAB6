@@ -1,5 +1,6 @@
 import socket
 
+
 ClientSocket = socket.socket()
 host = '172.20.10.6'
 port = 8888
