@@ -13,8 +13,10 @@ nok_message = 'HTTP/1.0 404 Not Found\n\n'
 
 def mathprocess(s_sock):
     msg = "\nWelcome to the Server!"
-
     s_sock.send(msg.encode('utf-8'))
+
+    msg2 =s_sock.recv(1024)
+    print(msg2.decode('utf-8')) 
     while True:
         data = s_sock.recv(2048).decode("utf-8").split(":")
 
