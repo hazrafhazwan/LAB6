@@ -7,7 +7,6 @@ from timeit import default_timer as timer
 
 def pi_part(n):
     print(n)
-
     count = 0
 
     for i in range(int(n)):
